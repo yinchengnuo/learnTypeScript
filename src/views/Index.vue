@@ -1,5 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <h1 class="index">TypeScript 学习笔记</h1>
+  <br>
+  <a href="https://github.com/yinchengnuo/learnTypeScript" target="_blank">
+    <h2>https://github.com/yinchengnuo/learnTypeScript</h2>
+  </a>
 </template>
+
+<script>
+export default {
+  name: 'Index'
+}
+</script>

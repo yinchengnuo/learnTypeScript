@@ -1,10 +1,22 @@
+
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link v-for="(route, index) in routes" :key="index" replace :to="route.path">
+      <span>{{ route.name }}</span>
+      <span v-if="index < routes.length - 1" style="margin: 12px;">|</span>
+    </router-link>
   </div>
   <router-view/>
 </template>
+
+<script lang="ts">
+import { routes } from '@/router'
+export default {
+  setup () : unknown {
+    return { routes }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

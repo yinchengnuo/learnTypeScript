@@ -1,5 +1,5 @@
 <template>
-  <h1 class="index">TypeScript 学习笔记</h1>
+  <h1>TypeScript 学习笔记</h1>
   <br>
   <a href="https://github.com/yinchengnuo/learnTypeScript" target="_blank">
     <h2>https://github.com/yinchengnuo/learnTypeScript</h2>
@@ -8,7 +8,6 @@
 
 <script lang="ts">
 export default {
-  name: 'Index',
   setup () : void {
     console.log('setup')
   }

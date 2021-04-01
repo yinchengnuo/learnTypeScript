@@ -6,8 +6,11 @@
   </a>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'Index'
+  name: 'Index',
+  setup () : void {
+    console.log('setup')
+  }
 }
 </script>

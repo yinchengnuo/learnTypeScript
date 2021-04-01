@@ -1,6 +1,7 @@
 # learn-typescript
 
 ## Project setup
+
 ```
 npm install
 ```

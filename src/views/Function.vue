@@ -1,6 +1,6 @@
 <template>
   <ol>
-    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
+    <li v-for="item in list" :key="item" v-html="item" />
   </ol>
 </template>
 
@@ -9,7 +9,7 @@ interface func2Interface {
   (x: number, y: number, z: number): number
 }
 export default {
-  setup (): unknown {
+  setup (): { func1: unknown, func2: unknown, list: string[] } {
     function func1 (x: number, y: string): string {
       const str: string = x + y
       return str

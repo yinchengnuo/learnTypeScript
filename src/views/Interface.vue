@@ -1,36 +1,32 @@
 <template>
   <ol>
-    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
+    <li v-for="item in list" :key="item" v-html="item" />
   </ol>
 </template>
 
 <script lang="ts">
-interface func2Interface {
-  (x: number, y: number, z: number): number
-}
 export default {
-  setup (): unknown {
-    function func1 (x: number, y: string): string {
-      const str: string = x + y
-      return str
+  setup (): { list: string[] } {
+    interface Person {
+      name: string,
+      age?: number,
+      [_: string]: unknown
     }
-    const func2: func2Interface = (x, y, z) => {
-      return x + y + z
-    }
-    const numVallue = 123
-    console.log(numVallue)
 
-    func2(1, 2, 3)
+    function get (person : Person) {
+      console.log(person.name)
+    }
+    function set (person : Person, name = 'ycn') {
+      person.name = name
+    }
+    get({ name: 'ycn', sex: 0, height: 200 })
+    set({ name: '' })
     return {
-      func1,
-      func2,
       list: [
-        '在 JavaScript 中，有两种常见的定义函数的方式——函数声明（Function Declaration）和函数表达式（Function Expression）',
-        '一个函数有输入和输出，要在 TypeScript 中对其进行约束，需要把输入和输出都考虑到，输入多余的（或者少于要求的）参数，是不被允许的，除非用 ? 表示可选的参数',
-        '可选参数必须接在必需参数后面。换句话说，可选参数后面不允许再出现必需参数了',
-        'TypeScript 会将添加了默认值的参数识别为可选参数，此时就不受「可选参数必须接在必需参数后面」的限制了',
-        'ES6 中，可以使用 ...rest 的方式获取函数中的剩余参数，事实上，rest 是一个数组。所以我们可以用数组的类型来定义它',
-        '重载允许一个函数接受不同数量或类型的参数时，作出不同的处理'
+        '在 TypeScript 中，我们使用接口（Interfaces）来定义对象的类型',
+        'TypeScript 中的接口是一个非常灵活的概念，除了可用于对类的一部分行为进行抽象以外，也常用于对「对象的形状（Shape）」进行描述',
+        '接口一般首字母大写，定义的变量比接口少了一些属性是不允许的，多一些属性也是不允许的，变量的形状必须和接口的形状保持一致',
+        '有时我们希望不要完全匹配一个形状，那么可以用可选属性，可选属性的含义是该属性可以不存在，这时仍然不允许添加未定义的属性'
       ]
     }
   }

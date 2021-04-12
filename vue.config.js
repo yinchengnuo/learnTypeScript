@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/typescript',
+  publicPath: '/ts',
   devServer: {
     port: 80,
     open: true,

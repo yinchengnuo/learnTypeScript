@@ -7,7 +7,9 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/Interface', name: 'Interface', component: () => import('@/views/Interface.vue') },
   { path: '/Class', name: 'Class', component: () => import('@/views/Class.vue') },
   { path: '/Function', name: 'Function', component: () => import('@/views/Function.vue') },
-  { path: '/Generic', name: 'Generic', component: () => import('@/views/Generic.vue') }
+  { path: '/Generic', name: 'Generic', component: () => import('@/views/Generic.vue') },
+  { path: '/Enum', name: 'Enum', component: () => import('@/views/Enum.vue') },
+  { path: '/Inference', name: 'Inference', component: () => import('@/views/Inference.vue') }
 ]
 
 const router = createRouter({

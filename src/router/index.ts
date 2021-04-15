@@ -9,7 +9,7 @@ export const routes: Array<RouteRecordRaw> = [
   { path: '/Function', name: 'Function', component: () => import('@/views/Function.vue') },
   { path: '/Generic', name: 'Generic', component: () => import('@/views/Generic.vue') },
   { path: '/Enum', name: 'Enum', component: () => import('@/views/Enum.vue') },
-  { path: '/Inference', name: 'Inference', component: () => import('@/views/Inference.vue') }
+  { path: '/Namespace', name: 'Namespace', component: () => import('@/views/Namespace.vue') }
 ]
 
 const router = createRouter({
